@@ -1,0 +1,13 @@
+<%- include ('partials/header') %>
+
+<% blogs.forEach(e => { %>
+    <div>
+       <p><%=e.title%></p>
+     </div>
+    <img src="<%= e.image %>">
+    <span><%=e.created%></span>
+    <p><%=e.body.substring(0,100)%></p>
+    <a href="/blogs/<%=e._id%>">Read More</a>
+    <% }) %>
+
+<%- include ('partials/footer') %>
